@@ -8,28 +8,34 @@
     <title>SUPERGYM</title>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
-  <body class="page__body">
-    <header class="header">
+  <body>
+    <header class="header container">
       <h1 class="visually-hidden">Фитнес-центр SYPERGYM.</h1>
       <span class="header__logo main-logo">SUPERGYM</span>
       <a class="header__phone-link" href="tel:88005555555">8-800-555-55-55</a>
     </header>
     <main>
-      <section class="hero">
-        <p class="hero__location">Омск</p>
-        <h2 class="hero__title">Фитнес Центр</h2>
-        <ul class="hero__list">
-          <li class="hero__item">Тренажёрный зал</li>
-          <li class="hero__item">Групповые занятия</li>
-          <li class="hero__item">Кардио-зона</li>
-        </ul>
-        <a class="hero__link button" href="#">Купить абонемент</a>
-        <picture>
-          <source type="image/webp" media="(max-width: 1199px)" srcset="img/hero-tablet.webp 1x, img/hero-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/hero.webp 1x, img/hero@2x.webp 2x">
-          <source media="(max-width: 1199px)" srcset="img/hero-tablet.jpg 1x, img/hero-tablet@2x.jpg 2x">
-          <img class="hero__image" src="img/hero.jpg" srcset="img/hero@2x.jpg" alt="Фотография мужчины в футболке." width="500" height="556">
-        </picture>
+      <section class="page__hero hero">
+        <div class="hero__wrapper container">
+          <div class="hero__content-wrapper">
+            <ul class="hero__list">
+              <li class="hero__item">Тренажёрный зал</li>
+              <li class="hero__item">Групповые занятия</li>
+              <li class="hero__item">Кардио-зона</li>
+            </ul>
+            <div class="hero__text-wrapper">
+              <p class="hero__location">омск</p>
+              <h2 class="hero__title">Фитнес центр</h2>
+              <a class="hero__link button" href="#">Купить абонемент</a>
+            </div>
+          </div>
+          <picture class="hero__picture">
+            <source type="image/webp" media="(max-width: 1199px)" srcset="img/hero-tablet.webp 1x, img/hero-tablet@2x.webp 2x" width="324" height="390">
+            <source type="image/webp" srcset="img/hero.webp 1x, img/hero@2x.webp 2x"  width="500" height="556">
+            <source media="(max-width: 1199px)" srcset="img/hero-tablet.jpg 1x, img/hero-tablet@2x.jpg 2x" width="324" height="390">
+            <img class="hero__image" src="img/hero.jpg" srcset="img/hero@2x.jpg" alt="Фотография мужчины в футболке." width="500" height="556">
+          </picture>
+        </div>
       </section>
       <section class="gym">
         <div class="gym__text-wrapper">
@@ -379,44 +385,46 @@
     </main>
 
     <footer class="footer">
-      <span class="footer__logo main-logo">SUPERGYM</span>
+      <div class="footer__container container">
+        <span class="footer__logo main-logo">SUPERGYM</span>
+        <nav class="footer__navigation">
+          <ul class="footer__navigation-list">
+            <li class="footer__navigation-item">
+              <a class="footer__navigation-link" href="#">Услуги</a>
+            </li>
+            <li class="footer__navigation-item">
+              <a class="footer__navigation-link" href="#">Абонементы</a>
+            </li>
+            <li class="footer__navigation-item">
+              <a class="footer__navigation-link" href="#">Акции</a>
+            </li>
+            <li class="footer__navigation-item">
+              <a class="footer__navigation-link" href="#">Тренеры</a>
+            </li>
+            <li class="footer__navigation-item">
+              <a class="footer__navigation-link" href="#">Расписание</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="footer__socials-list">
+          <li class="footer__socials-item">
+            <a class="footer__socials-link footer__socials-link--vk" href="#">
+              <span class="visually-hidden">Ссылка на Вконтакте.</span>
+            </a>
+          </li>
+          <li class="footer__socials-item">
+            <a class="footer__socials-link footer__socials-link--ok" href="#">
+              <span class="visually-hidden">Ссылка на Одноклассники.</span>
+            </a>
+          </li>
+          <li class="footer__socials-item">
+            <a class="footer__socials-link footer__socials-link--reddit" href="#">
+              <span class="visually-hidden">Ссылка на Реддит.</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </footer>
-    <nav class="footer__navigation">
-      <ul class="footer__navigation-list">
-        <li class="footer__navigation-item">
-          <a class="footer__navigation-link" href="#">Услуги</a>
-        </li>
-        <li class="footer__navigation-item">
-          <a class="footer__navigation-link" href="#">Абонементы</a>
-        </li>
-        <li class="footer__navigation-item">
-          <a class="footer__navigation-link" href="#">Акции</a>
-        </li>
-        <li class="footer__navigation-item">
-          <a class="footer__navigation-link" href="#">Тренеры</a>
-        </li>
-        <li class="footer__navigation-item">
-          <a class="footer__navigation-link" href="#">Расписание</a>
-        </li>
-      </ul>
-    </nav>
-    <ul class="footer__socials-list">
-      <li class="footer__socials-item">
-        <a class="footer__socials-link" href="#">
-          <span class="visually-hidden">Ссылка на Вконтакте.</span>
-        </a>
-      </li>
-      <li class="footer__socials-item">
-        <a class="footer__socials-link" href="#">
-          <span class="visually-hidden">Ссылка на Одноклассники.</span>
-        </a>
-      </li>
-      <li class="footer__socials-item">
-        <a class="footer__socials-link" href="#">
-          <span class="visually-hidden">Ссылка на Реддит.</span>
-        </a>
-      </li>
-    </ul>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>

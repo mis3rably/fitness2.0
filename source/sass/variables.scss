@@ -22,7 +22,9 @@ $color-error:                       #ff121f;
 
 $gradient-primary:                  linear-gradient(151deg, #ED0233 0%, #003EB7 100%);
 $gradient-secondary:                linear-gradient(129deg, #D10A42 0%, #0041CA 100%);
-$gradient-bg:                       conic-gradient(from 151deg at 16.03% 39.06%, #003D85 32.23633825778961deg, #B80027 313.3060026168823deg);
+$hero-bg-desktop:                   conic-gradient(from 151deg at 16.03% 39.06%, #003D85 32.23633825778961deg, #B80027 313.3060026168823deg);
+$hero-bg-tablet:                    conic-gradient(from 155deg at 20.70% 35.74%, #003D85 32.23633825778961deg, #B80027 313.3060026168823deg);
+$hero-bg-mobile:                    conic-gradient(from 167deg at 35.31% 34.22%, #003D85 32.23633825778961deg, #B80027 313.3060026168823deg);
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
 
 // Typography
@@ -34,7 +36,7 @@ $fz-default:                        16px;
 // у некоторых шрифтов в ios возникают проблемы с символом рубля
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13
 $ff-rouble:                         "Rouble", "Arial", sans-serif;
-
+$ff-secondary:                      "Alumni Sans", "Arial", sans-serif;
 $ff-placeholder:                    "Roboto Condensed", "Arial", sans-serif;
 
 // Animation
