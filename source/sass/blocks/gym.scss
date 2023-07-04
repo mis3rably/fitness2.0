@@ -4,11 +4,15 @@
   @include vp-1199 {
     padding: 100px 0 183px;
   }
+
+  @include vp-767 {
+    padding: 63px 0 183px;
+  }
 }
 
 .gym__wrapper {
   display: flex;
-  gap: 20px;
+  gap: 22px;
 
   @include vp-1199 {
     flex-direction: column;
@@ -17,7 +21,7 @@
   }
 
   @include vp-767 {
-    gap: 40px;
+    gap: 25px;
   }
 }
 
@@ -27,6 +31,10 @@
 
   @include vp-1199 {
     padding: 0 50px;
+  }
+
+  @include vp-1199 {
+    padding: 0;
   }
 }
 
@@ -47,6 +55,13 @@
     padding: 0 16px 0 0;
     margin: 0;
   }
+
+  @include vp-767 {
+    font-size: 32px;
+    letter-spacing: 0.96px;
+    text-align: left;
+    margin: 0 0 5px 0;
+  }
 }
 
 .gym__text-wrapper h3 {
@@ -62,6 +77,11 @@
     margin: 0 0 33px 0;
     text-align: center;
   }
+
+  @include vp-767 {
+    text-align: left;
+    margin: 0 0 24px 0;
+  }
 }
 
 .gym__text-wrapper p {
@@ -76,6 +96,11 @@
     text-align: center;
     font-size: 16px;
     font-weight: 300;
+  }
+
+  @include vp-767 {
+    text-align: left;
+    padding: 0 27px 0 0;
   }
 }
 
@@ -99,6 +124,13 @@
     padding: 0 0 83px 0;
     align-self: auto;
   }
+
+  @include vp-767 {
+    width: calc(100% + 30px);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
 }
 
 .gym__video-wrapper {
@@ -110,6 +142,12 @@
     left: 50%;
     transform: translateX(-50%);
   }
+
+  @include vp-767 {
+    position: relative;
+    transform: none;
+    left: auto;
+  }
 }
 
 .gym__video {
@@ -119,5 +157,17 @@
   @include vp-1199 {
     width: 266px;
     height: 167px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+
+  background-image: url("../img/coach-1.jpg");
+}
+
+.gym__image {
+  @include vp-767 {
+    width: 100%;
   }
 }

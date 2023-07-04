@@ -652,12 +652,17 @@ button,
     padding: 100px 0 183px;
   }
 }
+@media (max-width: 767px) {
+  .gym {
+    padding: 63px 0 183px;
+  }
+}
 
 .gym__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 20px;
+  gap: 22px;
 }
 @media (max-width: 1199px) {
   .gym__wrapper {
@@ -673,7 +678,7 @@ button,
 }
 @media (max-width: 767px) {
   .gym__wrapper {
-    gap: 40px;
+    gap: 25px;
   }
 }
 
@@ -684,6 +689,11 @@ button,
 @media (max-width: 1199px) {
   .gym__text-wrapper {
     padding: 0 50px;
+  }
+}
+@media (max-width: 1199px) {
+  .gym__text-wrapper {
+    padding: 0;
   }
 }
 
@@ -706,6 +716,14 @@ button,
     margin: 0;
   }
 }
+@media (max-width: 767px) {
+  .gym__text-wrapper h2 {
+    font-size: 32px;
+    letter-spacing: 0.96px;
+    text-align: left;
+    margin: 0 0 5px 0;
+  }
+}
 
 .gym__text-wrapper h3 {
   color: inherit;
@@ -722,6 +740,12 @@ button,
     text-align: center;
   }
 }
+@media (max-width: 767px) {
+  .gym__text-wrapper h3 {
+    text-align: left;
+    margin: 0 0 24px 0;
+  }
+}
 
 .gym__text-wrapper p {
   color: inherit;
@@ -736,6 +760,12 @@ button,
     text-align: center;
     font-size: 16px;
     font-weight: 300;
+  }
+}
+@media (max-width: 767px) {
+  .gym__text-wrapper p {
+    text-align: left;
+    padding: 0 27px 0 0;
   }
 }
 
@@ -765,6 +795,19 @@ button,
         align-self: auto;
   }
 }
+@media (max-width: 767px) {
+  .gym__media-wrapper {
+    width: calc(100% + 30px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 40px;
+  }
+}
 
 .gym__video-wrapper {
   position: absolute;
@@ -779,16 +822,37 @@ button,
             transform: translateX(-50%);
   }
 }
+@media (max-width: 767px) {
+  .gym__video-wrapper {
+    position: relative;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    left: auto;
+  }
+}
 
 .gym__video {
   height: 228px;
   -o-object-fit: cover;
      object-fit: cover;
+  background-image: url("../img/coach-1.jpg");
 }
 @media (max-width: 1199px) {
   .gym__video {
     width: 266px;
     height: 167px;
+  }
+}
+@media (max-width: 767px) {
+  .gym__video {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .gym__image {
+    width: 100%;
   }
 }
 
@@ -867,6 +931,7 @@ button,
   .hero {
     gap: 0;
     background: conic-gradient(from 167deg at 35.31% 34.22%, #003D85 32.2363382578deg, #B80027 313.3060026169deg);
+    padding-bottom: 28px;
   }
 }
 
