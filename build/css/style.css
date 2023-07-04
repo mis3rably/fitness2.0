@@ -644,6 +644,154 @@ button,
   background-image: url("../img/sprite.svg#ok");
 }
 
+.gym {
+  padding: 120px 0 50px 0;
+}
+@media (max-width: 1199px) {
+  .gym {
+    padding: 100px 0 183px;
+  }
+}
+
+.gym__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 1199px) {
+  .gym__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 35px;
+  }
+}
+@media (max-width: 767px) {
+  .gym__wrapper {
+    gap: 40px;
+  }
+}
+
+.gym__text-wrapper {
+  padding: 39px 0 0 60px;
+  color: #102654;
+}
+@media (max-width: 1199px) {
+  .gym__text-wrapper {
+    padding: 0 50px;
+  }
+}
+
+.gym__text-wrapper h2 {
+  font-size: 48px;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.44px;
+  margin: 0 0 8px 0;
+  color: inherit;
+}
+@media (max-width: 1199px) {
+  .gym__text-wrapper h2 {
+    font-size: 42px;
+    letter-spacing: 1.26px;
+    text-align: center;
+    padding: 0 16px 0 0;
+    margin: 0;
+  }
+}
+
+.gym__text-wrapper h3 {
+  color: inherit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  margin: 0 0 39px 0;
+}
+@media (max-width: 1199px) {
+  .gym__text-wrapper h3 {
+    font-size: 18px;
+    margin: 0 0 33px 0;
+    text-align: center;
+  }
+}
+
+.gym__text-wrapper p {
+  color: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%;
+  margin: 0;
+}
+@media (max-width: 1199px) {
+  .gym__text-wrapper p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 300;
+  }
+}
+
+.gym__text-wrapper p:not(:last-child) {
+  margin: 0 0 8px 0;
+}
+
+@media (max-width: 1199px) {
+  .gym__text-wrapper p:not(:first-of-type) {
+    display: none;
+  }
+}
+
+.gym__media-wrapper {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  position: relative;
+  padding: 0 0 115px 63px;
+}
+@media (max-width: 1199px) {
+  .gym__media-wrapper {
+    padding: 0 0 83px 0;
+    -ms-flex-item-align: auto;
+        -ms-grid-row-align: auto;
+        align-self: auto;
+  }
+}
+
+.gym__video-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+@media (max-width: 1199px) {
+  .gym__video-wrapper {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+.gym__video {
+  height: 228px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 1199px) {
+  .gym__video {
+    width: 266px;
+    height: 167px;
+  }
+}
+
 .header {
   position: absolute;
   left: 50%;
@@ -712,6 +860,7 @@ button,
   .hero {
     gap: 30px;
     background: conic-gradient(from 155deg at 20.7% 35.74%, #003D85 32.2363382578deg, #B80027 313.3060026169deg);
+    padding-bottom: 31px;
   }
 }
 @media (max-width: 767px) {
@@ -962,39 +1111,33 @@ button,
   .page__hero {
     padding-top: 40px;
   }
-} /* @mixin hover-focus {
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        @content;
-      }
-    }
+}
 
-    &.focus-visible:focus {
-      @content;
-    }
+.video-player__video {
+  position: relative;
+}
+
+.video-player__play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.video-player__play-button--hidden {
+  display: none;
+}
+
+@media (max-width: 1199px) {
+  .video-player__play-button-svg {
+    width: 73px;
+    height: 73px;
   }
-*/
-/*  @include hover-focus {
-      opacity: 0.8;
-    }
-*/
-/*@mixin hover {
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        @content;
-      }
-    }
-  }
-*/
-/*@mixin focus {
-    &.focus-visible:focus {
-      @content;
-    }
-  }
-*/
-/*@mixin active {
-    &.focus-visible:active {
-      @content;
-    }
-  }
-*/
+}

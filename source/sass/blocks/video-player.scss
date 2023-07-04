@@ -1,0 +1,27 @@
+.video-player__video {
+  position: relative;
+}
+
+.video-player__play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.video-player__play-button-svg {
+  @include vp-1199 {
+    width: 73px;
+    height: 73px;
+  }
+}

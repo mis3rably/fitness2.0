@@ -4,6 +4,7 @@
   @include vp-1199 {
     gap: 30px;
     background: $hero-bg-tablet;
+    padding-bottom: 31px;
   }
 
   @include vp-767 {

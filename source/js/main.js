@@ -48,3 +48,17 @@ window.addEventListener('DOMContentLoaded', () => {
 // breakpointChecker();
 
 // используйте .closest(el)
+
+const video = document.querySelector('.video-player__video');
+const videoButton = document.querySelector('.video-player__play-button');
+
+if (video && videoButton) {
+  video.removeAttribute('controls');
+  videoButton.classList.remove('video-player__play-button--hidden');
+
+  videoButton.addEventListener('click', () => {
+    video.setAttribute('controls', '');
+    videoButton.classList.add('video-player__play-button--hidden');
+    video.play();
+  });
+}
