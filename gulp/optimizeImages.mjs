@@ -32,6 +32,10 @@ const optimizeSvg = () =>
                 {
                   name: 'removeUselessStrokeAndFill',
                   active: false,
+                },
+                {
+                  name: 'removeUselessDefs',
+                  active: true,
                 }],
             })]))
       .pipe(gulp.dest('build/img'));

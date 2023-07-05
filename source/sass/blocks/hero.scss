@@ -156,9 +156,6 @@
 .hero__link {
   display: block;
   color: $color-default-white;
-  min-width: 230px;
-  min-height: 57px;
-  text-align: center;
   padding: 22px 56px;
 
   @include vp-1199 {

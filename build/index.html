@@ -26,7 +26,7 @@
             <div class="hero__text-wrapper">
               <p class="hero__location">омск</p>
               <h2 class="hero__title">Фитнес центр</h2>
-              <a class="hero__link button" href="#">Купить абонемент</a>
+              <a class="hero__link button button--primary" href="#">Купить абонемент</a>
             </div>
           </div>
           <picture class="hero__picture">
@@ -74,45 +74,99 @@
         </div>
       </section>
       <section class="subscription">
-        <h2 class="subscription__title">Абонементы</h2>
-        <div class="subscription__indication-wrapper">
-          <ol class="subscription__list">
-            <li class="subscription__item">
-              <button class="subscription__button">1 месяц</button>
+        <div class="subscription__wrapper container">
+          <h2 class="subscription__title title">Абонементы</h2>
+          <div class="subscription__indication-wrapper">
+            <ol class="subscription__list">
+              <li class="subscription__item">
+                <button class="subscription__button subscription__button--active" data-tab-button="1-month">1 месяц</button>
+              </li>
+              <li class="subscription__item">
+                <button class="subscription__button" data-tab-button="6-months">6 месяцев</button>
+              </li>
+              <li class="subscription__item">
+                <button class="subscription__button" data-tab-button="12-months">12 месяцев</button>
+              </li>
+            </ol>
+            <div class="subscription__indicator">
+              <div class="subscription__indicator-fill"></div>
+            </div>
+          </div>
+          <ul class="subscription__card-list">
+            <li class="subscription__card-item subscription-card">
+              <h3 class="subscription-card__title">С тренером</h3>
+              <p class="subscription-card__desc">12 занятий</p>
+              <div class="subscription-card__prices-wrapper">
+                <div class="subscription-card__price-wrapper subscription-card__price-wrapper--active" data-tab-content="1-month">
+                  <b class="subscription-card__price">5000</b>
+                  <span class="subscription-card__price-currency">₽</span>
+                  <span class="subscription-card__text-shadow">5000</span>
+                </div>
+                <div class="subscription-card__price-wrapper" data-tab-content="6-months">
+                  <b class="subscription-card__price">15000</b>
+                  <span class="subscription-card__price-currency">₽</span>
+                  <span class="subscription-card__text-shadow">15000</span>
+                </div>
+                <div class="subscription-card__price-wrapper" data-tab-content="12-months">
+                  <b class="subscription-card__price">25000</b>
+                  <span class="subscription-card__price-currency">₽</span>
+                  <span class="subscription-card__text-shadow">25000</span>
+                </div>
+              </div>
+              <a class="subscription-card__order-link button button--secondary" href="#">Купить абонемент</a>
             </li>
-            <li class="subscription__item">
-              <button class="subscription__button">6 месяцев</button>
+            <li class="subscription__card-item subscription-card subscription-card--special">
+              <h3 class="subscription-card__title">Дневной</h3>
+              <p class="subscription-card__desc">с 8:00 до 17:00</p>
+              <div class="subscription-card__prices-wrapper">
+                <div class="subscription-card__price-wrapper subscription-card__price-wrapper--active" data-tab-content="1-month">
+                  <b class="subscription-card__price">1700</b>
+                  <span class="subscription-card__price-currency">₽</span>
+                  <span class="subscription-card__text-shadow">1700</span>
+                </div>
+                <div class="subscription-card__price-wrapper" data-tab-content="6-months">
+                  <b class="subscription-card__price">3500</b>
+                  <span class="subscription-card__price-currency">₽</span>
+                  <span class="subscription-card__text-shadow">3500</span>
+                </div>
+                <div class="subscription-card__price-wrapper" data-tab-content="12-months">
+                  <b class="subscription-card__price">4500</b>
+                  <span class="subscription-card__price-currency">₽</span>
+                  <span class="subscription-card__text-shadow">4500</span>
+                </div>
+              </div>
+              <a class="subscription-card__order-link button button--secondary" href="#">Купить абонемент</a>
             </li>
-            <li class="subscription__item">
-              <button class="subscription__button">12 месяцев</button>
+            <li class="subscription__card-item subscription-card">
+              <h3 class="subscription-card__title">Полный день</h3>
+              <p class="subscription-card__desc">с 8:00 до 22:00 </p>
+              <div class="subscription-card__prices-wrapper">
+                <div class="subscription-card__price-wrapper subscription-card__price-wrapper--active" data-tab-content="1-month">
+                  <b class="subscription-card__price">2700</b>
+                  <span class="subscription-card__price-currency">₽</span>
+                  <span class="subscription-card__text-shadow">2700</span>
+                </div>
+                <div class="subscription-card__price-wrapper" data-tab-content="6-months">
+                  <b class="subscription-card__price">4000</b>
+                  <span class="subscription-card__price-currency">₽</span>
+                  <span class="subscription-card__text-shadow">4000</span>
+                </div>
+                <div class="subscription-card__price-wrapper" data-tab-content="12-months">
+                  <b class="subscription-card__price">6000</b>
+                  <span class="subscription-card__price-currency">₽</span>
+                  <span class="subscription-card__text-shadow">6000</span>
+                </div>
+              </div>
+              <a class="subscription-card__order-link button button--secondary" href="#">Купить абонемент</a>
             </li>
-          </ol>
-          <div class="subscription__indicator"></div>
+          </ul>
+          <picture class="subscription__picture">
+            <source type="image/webp" media="(max-width: 1199px)" srcset="img/weights-tablet.webp 1x, img/weights-tablet@2x.webp 2x" width="289" height="345">
+            <source type="image/webp" srcset="img/weights.webp 1x, img/weights@2x.webp 2x" width="321" height="284">
+            <source media="(max-width: 1199px)" srcset="img/weights-tablet.png 1x, img/weights-tablet@2x.png 2x" width="289" height="345">
+            <img class="subscription__weights-img" src="img/weights.png" srcset="img/weights@2x.png" aria-hidden="true" alt="Изображение весовых блинов." width="321" height="284">
+          </picture>
         </div>
-        <ul class="subscription__card-list">
-          <li class="subscription__card-item subscription-card">
-            <h3 class="subscription-card__title">С тренером</h3>
-            <p class="subscription-card__desc">12 занятий</p>
-            <b class="subscription-card__price">5000</b>
-            <a class="subscription-card__price__order-link" href="#">Купить абонемент</a>
-          </li>
-          <li class="subscription__card-item subscription-card">
-            <h3 class="subscription-card__title">Дневной</h3>
-            <p class="subscription-card__desc">с 8:00 до 17:00</p>
-            <b class="subscription-card__price">1700</b>
-            <a class="subscription-card__price__order-link" href="#">Купить абонемент</a>
-          </li>
-          <li class="subscription__card-item subscription-card">
-            <h3 class="subscription-card__title">Полный день</h3>
-            <p class="subscription-card__desc">с 8:00 до 22:00 </p>
-            <b class="subscription-card__price">2700</b>
-            <a class="subscription-card__price__order-link" href="#">Купить абонемент</a>
-          </li>
-        </ul>
-        <picture>
-          <source type="image/webp" srcset="img/weights.webp 1x, img/weights@2x.webp 2x">
-          <img class="subscription__weights-img" src="img/weights.jpg" srcset="img/weights@2x.jpg" alt="Изображение весовых блинов." width="321" height="284">
-        </picture>
       </section>
       <section class="super-games">
         <div class="super-games__text-wrapper">
@@ -135,7 +189,7 @@
         </picture>
       </section>
       <section class="coaches">
-        <h2 class="coaches__title">Тренеры</h2>
+        <h2 class="coaches__title title">Тренеры</h2>
         <ul class="coaches__list">
           <li class="coaches__item coach-card">
             <picture>
@@ -204,7 +258,7 @@
         </ul>
       </section>
       <section class="advantages">
-        <h2 class="advantages__title">Наши преимущества</h2>
+        <h2 class="advantages__title title">Наши преимущества</h2>
         <ul class="advantages__list">
           <li class="advantages__item">
             <div class="advantages__heading-wrapper">
@@ -256,7 +310,7 @@
         </ul>
       </section>
       <section class="promo">
-        <h2 class="promo__title">Акции</h2>
+        <h2 class="promo__title title">Акции</h2>
         <div class="promo__special-block special-promo">
           <div class="special-promo__text-wrapper">
             <p class="special-promo__subheading">Год</p>
@@ -285,7 +339,7 @@
         </div>
       </section>
       <section class="faq">
-        <h2 class="faq__title">Вопросы и ответы</h2>
+        <h2 class="faq__title title">Вопросы и ответы</h2>
         <ul class="faq__buttons-list">
           <li class="faq__buttons-item">
             <button class="far__button button button--tab">Центр</button>
@@ -332,7 +386,7 @@
         </ul>
       </section>
       <section class="reviews">
-        <h2 class="reviews__title">Отзывы</h2>
+        <h2 class="reviews__title title">Отзывы</h2>
         <ul class="reviews__list">
           <li class="reviews__item review">
             <picture>
@@ -368,7 +422,7 @@
           </form>
         </div>
         <div class="contacts">
-          <h2 class="contacts__title">Контакты</h2>
+          <h2 class="contacts__title title">Контакты</h2>
           <ul class="contacts__list">
             <li class="contacts__item">
               <h3 class="contacts__item-title">Адрес:</h3>
