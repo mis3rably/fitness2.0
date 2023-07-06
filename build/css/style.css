@@ -363,6 +363,7 @@ html {
   line-height: 24px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   color: #000000;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -696,7 +697,7 @@ button,
     padding: 0 50px;
   }
 }
-@media (max-width: 1199px) {
+@media (max-width: 767px) {
   .gym__text-wrapper {
     padding: 0;
   }
@@ -1183,18 +1184,18 @@ button,
 
 .subscription {
   padding: 120px 0 188px;
-  background: linear-gradient(180deg, rgb(255, 255, 255) 250px, rgb(248, 249, 252) 850px, rgb(255, 255, 255) 850px);
+  background: linear-gradient(180deg, rgb(255, 255, 255) 250px, rgb(248, 249, 252) 250px, rgb(248, 249, 252) 850px, rgb(255, 255, 255) 850px);
   overflow: hidden;
 }
 @media (max-width: 1199px) {
   .subscription {
-    background: #f8f9fc;
-    padding: 50px 0 188px;
+    background: linear-gradient(180deg, rgb(248, 249, 252) 1778px, rgb(255, 255, 255) 1778px);
+    padding: 100px 0 188px;
   }
 }
-@media (max-width: 1199px) {
+@media (max-width: 767px) {
   .subscription {
-    padding: 64px 0 188px;
+    padding: 64px 0 69px;
   }
 }
 
@@ -1219,7 +1220,6 @@ button,
 }
 @media (max-width: 767px) {
   .subscription__wrapper {
-    max-width: 320px;
     padding: 0 15px;
   }
 }
@@ -1243,6 +1243,9 @@ button,
   padding: 0;
   margin: 0;
   position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 @media (max-width: 1199px) {
   .subscription__list {
@@ -1299,7 +1302,7 @@ button,
     font-size: 18px;
   }
 }
-@media (max-width: 1199px) {
+@media (max-width: 767px) {
   .subscription__button {
     font-size: 16px;
   }
@@ -1317,9 +1320,6 @@ button,
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 11px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin: 0 0 39px 0;
 }
 @media (max-width: 1199px) {
@@ -1507,6 +1507,222 @@ button,
   min-width: 200px;
   min-height: 64px;
   padding: 23px 42px;
+}
+
+.super-games__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 52px 0 53px;
+}
+@media (max-width: 1199px) {
+  .super-games__wrapper {
+    padding: 15px 0 53px;
+  }
+}
+@media (max-width: 767px) {
+  .super-games__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 70px 0 53px;
+  }
+}
+
+.super-games__text-wrapper {
+  width: 500px;
+  background-color: #ed0233;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (max-width: 1199px) {
+  .super-games__text-wrapper {
+    padding: 50px 0;
+  }
+}
+@media (max-width: 767px) {
+  .super-games__text-wrapper {
+    width: 290px;
+  }
+}
+
+.super-games__info-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 343px;
+  gap: 51px;
+  margin: 0 0 24px 0;
+}
+@media (max-width: 1199px) {
+  .super-games__info-wrapper {
+    margin: 0 0 6px 0;
+    gap: 26px;
+  }
+}
+
+.super-games__details-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  gap: 26px;
+}
+@media (max-width: 1199px) {
+  .super-games__details-wrapper {
+    gap: 5px;
+  }
+}
+
+.super-games__title {
+  text-align: center;
+  margin: 0;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-size: 82px;
+  font-weight: 600;
+  line-height: 96%;
+  letter-spacing: 2.46px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 201px;
+}
+@media (max-width: 1199px) {
+  .super-games__title {
+    font-size: 48px;
+    letter-spacing: 1.44px;
+    line-height: 96%;
+    width: 119px;
+  }
+}
+
+.super-games__detail-name {
+  font-size: 18px;
+  margin: 0 0 10px;
+  line-height: 100%;
+}
+@media (max-width: 1199px) {
+  .super-games__detail-name {
+    font-size: 12px;
+    margin: 0 0 8px;
+  }
+}
+
+.super-games__detail-desc {
+  margin: 0;
+  display: inline-block;
+  text-align: left;
+  width: 37px;
+  font-size: 14px;
+  line-height: 136%;
+}
+@media (max-width: 1199px) {
+  .super-games__detail-desc {
+    font-size: 10px;
+    width: 26px;
+  }
+}
+
+.super-games__detail-date {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 100%;
+}
+@media (max-width: 1199px) {
+  .super-games__detail-date {
+    font-size: 24px;
+  }
+}
+
+.super-games__desc {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  margin: 0 64px 0 0;
+}
+@media (max-width: 1199px) {
+  .super-games__desc {
+    font-size: 12px;
+    margin: 0 16px 0 0;
+  }
+}
+
+.super-games__link {
+  margin: 40px 0 0;
+  color: inherit;
+  display: block;
+  text-align: center;
+  padding: 26px 20px;
+  width: 100%;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  max-width: 343px;
+}
+@media (max-width: 1199px) {
+  .super-games__link {
+    font-size: 10px;
+    max-width: 202px;
+    padding: 12px 10px;
+    margin: 30px 0 0;
+    border: 2px solid #ffffff;
+  }
+}
+
+.super-games__time-wrapper {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 7px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 1199px) {
+  .super-games__time-wrapper {
+    gap: 3px;
+  }
+}
+.super-games__time-wrapper::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .super-games__picture {
+    width: 290px;
+    height: 292px;
+  }
 }
 
 .video-player__video {

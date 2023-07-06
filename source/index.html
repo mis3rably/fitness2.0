@@ -26,7 +26,7 @@
             <div class="hero__text-wrapper">
               <p class="hero__location">омск</p>
               <h2 class="hero__title">Фитнес центр</h2>
-              <a class="hero__link button button--primary" href="#">Купить абонемент</a>
+              <a class="hero__link button button--primary" href="#subscription">Купить абонемент</a>
             </div>
           </div>
           <picture class="hero__picture">
@@ -73,7 +73,7 @@
           </div>
         </div>
       </section>
-      <section class="subscription">
+      <section class="subscription" id="subscription">
         <div class="subscription__wrapper container">
           <h2 class="subscription__title title">Абонементы</h2>
           <div class="subscription__indication-wrapper">
@@ -168,25 +168,39 @@
           </picture>
         </div>
       </section>
-      <section class="super-games">
-        <div class="super-games__text-wrapper">
-          <h2 class="super-games__title">SUPER GAMES</h2>
-          <div class="super-games__details-wrapper">
-            <p class="super-games__detail-name">Дата</p>
-            <b class="super-games__detail-date">7</b>
-            <p class="super-games__detail-desc">Марта 2019</p>
+      <section class="super-games container">
+        <div class="super-games__wrapper">
+          <div class="super-games__text-wrapper">
+            <div class="super-games__info-wrapper">
+              <h2 class="super-games__title">SUPER GAMES</h2>
+              <div class="super-games__details-wrapper">
+                <div class="super-games__detail">
+                  <p class="super-games__detail-name">Дата</p>
+                  <div class="super-games__time-wrapper">
+                    <b class="super-games__detail-date">7</b>
+                    <p class="super-games__detail-desc">Марта 2019</p>
+                  </div>
+                </div>
+                <div class="super-games__detail">
+                  <p class="super-games__detail-name">Время</p>
+                  <div class="super-games__time-wrapper">
+                    <b class="super-games__detail-date">12:00</b>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="super-games__desc">Ежегодные соревнования по CrossFit</p>
+            <a class="super-games__link button button--primary" href="#">Заполнить заявку</a>
           </div>
-          <div class="super-games__details-wrapper">
-            <p class="super-games__detail-name">Время</p>
-            <b class="super-games__detail-date">12:00</b>
-          </div>
-          <p class="super-games__desc">Ежегодные соревнования по CrossFit</p>
-          <a class="super-games__link button" href="#">Заполнить заявку</a>
+          <picture class="super-games__picture">
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/supergames-mobile.webp 1x, img/supergames-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1199px)" srcset="img/supergames-tablet.webp 1x, img/supergames-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/supergames.webp 1x, img/supergames@2x.webp 2x" width="660" height="500">
+            <source media="(max-width: 767px)" srcset="img/supergames-mobile.jpg 1x, img/supergames-mobile@2x.jpg 2x">
+            <source media="(max-width: 1199px)" srcset="img/supergames-tablet.jpg 1x, img/supergames-tablet@2x.jpg 2x">
+            <img class="super-games__image" src="img/supergames.jpg" srcset="img/supergames@2x.jpg 2x" alt="Изображение промо-блока Super Games." width="660" height="500">
+          </picture>
         </div>
-        <picture>
-          <source type="image/webp" srcset="img/supergames.webp 1x, img/supergames@2x.webp 2x">
-          <img class="super-games__image" src="img/supergames.jpg" srcset="img/supergames@2x.jpg 2x" alt="Изображение промо-блока Super Games.">
-        </picture>
       </section>
       <section class="coaches">
         <h2 class="coaches__title title">Тренеры</h2>
