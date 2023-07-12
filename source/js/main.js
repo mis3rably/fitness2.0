@@ -92,6 +92,6 @@ window.form = form;
 if (formSubmit && formMainPage) {
   formMainPage.addEventListener('submit', (evt) => {
     evt.preventDefault();
-    formMainPage.submit();
+    formMainPage.reset().submit();
   });
 }
