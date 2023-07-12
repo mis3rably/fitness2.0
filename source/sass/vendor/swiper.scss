@@ -18,7 +18,7 @@
   font-style: normal;
 }
 :root {
-  --swiper-theme-color: #007aff;
+  --swiper-theme-color: #afafaf;
 }
 .swiper {
   margin-left: auto;
@@ -54,7 +54,7 @@
 }
 .swiper-slide {
   flex-shrink: 0;
-  width: 100%;
+  width: fit-content;
   height: 100%;
   position: relative;
   transition-property: transform;
@@ -174,7 +174,8 @@
   height: var(--swiper-virtual-size);
 }
 :root {
-  --swiper-navigation-size: 44px;
+  --swiper-navigation-size: 53px;
+  --swiper-navigation-size-mobile: 32px;
   /*
   --swiper-navigation-color: var(--swiper-theme-color);
   */
@@ -183,7 +184,7 @@
 .swiper-button-next {
   position: absolute;
   top: 50%;
-  width: calc(var(--swiper-navigation-size) / 44 * 27);
+  width: var(--swiper-navigation-size);
   height: var(--swiper-navigation-size);
   margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
   z-index: 10;
@@ -192,6 +193,17 @@
   align-items: center;
   justify-content: center;
   color: var(--swiper-navigation-color, var(--swiper-theme-color));
+  border: 0;
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 0;
+  transition: 0.2s ease-in-out;
+  border: 1px solid transparent;
+
+  @media (max-width: 767px) {
+    width: var(--swiper-navigation-size-mobile);
+    height: var(--swiper-navigation-size-mobile);
+  }
 }
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
@@ -202,17 +214,47 @@
 .swiper-button-prev:after,
 .swiper-button-next:after {
   font-family: swiper-icons;
-  font-size: var(--swiper-navigation-size);
+  font-size: 33px;
+  color: #102654;
   text-transform: none !important;
   letter-spacing: 0;
   text-transform: none;
   font-variant: initial;
   line-height: 1;
+  width: 16px;
+  height: 32px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @media (max-width: 767px) {
+    font-size: 22px;
+  }
+}
+.swiper-button-prev:after {
+  left: 14px;
+
+  @media (max-width: 767px) {
+    left: 5px;
+    top: 20px;
+  }
+}
+.swiper-button-next::after {
+  right: 16px;
+
+  @media (max-width: 767px) {
+    right: 5px;
+    top: 20px;
+  }
 }
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
-  left: 10px;
+  left: -75px;
   right: auto;
+
+  @media (max-width: 767px) {
+    left: -38px;
+  }
 }
 .swiper-button-prev:after,
 .swiper-rtl .swiper-button-next:after {
@@ -220,8 +262,12 @@
 }
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
-  right: 10px;
+  right: -75px;
   left: auto;
+
+  @media (max-width: 767px) {
+    right: -38px;
+  }
 }
 .swiper-button-next:after,
 .swiper-rtl .swiper-button-prev:after {
@@ -229,6 +275,20 @@
 }
 .swiper-button-lock {
   display: none;
+}
+.swiper-button-next:hover,
+.swiper-button-next:focus,
+.swiper-button-prev:focus,
+.swiper-button-prev:hover {
+  border: 1px solid #102654;
+}
+.swiper-button-next:active,
+.swiper-button-prev:active {
+  background-color: #102654;
+
+  &::after {
+    color: #ffffff;
+  }
 }
 :root {
   /*

@@ -5,6 +5,7 @@
   padding-top: 30px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   @include vp-1199 {
     padding-top: 34px;

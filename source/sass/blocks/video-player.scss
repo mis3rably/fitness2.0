@@ -2,26 +2,123 @@
   position: relative;
 }
 
+.video-player__play-button-svg {
+  color: $color-default-white;
+  transition: 0.2s;
+
+  @include vp-1199 {
+    width: 73px;
+    height: 73px;
+  }
+}
+
 .video-player__play-button {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  width: 100px;
-  height: 100px;
+  width: 102px;
+  height: 102px;
+  border-radius: 50%;
   background-color: transparent;
-  border: none;
+  border: 0;
   padding: 0;
   margin: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-image: $gradient-video-button;
+    z-index: 1;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    opacity: 0.2;
+    mask:
+      linear-gradient($color-default-white 0 0) padding-box,
+      linear-gradient($color-default-white 0 0);
+    mask-composite: exclude;
+    transition: 0.2s ease-in-out;
+
+    @include vp-1199 {
+      width: 73px;
+      height: 73px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 73px;
+    height: 73px;
+    background-image: $gradient-video-button;
+    z-index: -1;
+    border-radius: 50%;
+    transition: 0.2s;
+
+    @include vp-1199 {
+      width: 52px;
+      height: 52px;
+    }
+  }
 
   &--hidden {
     display: none;
   }
-}
 
-.video-player__play-button-svg {
-  @include vp-1199 {
-    width: 73px;
-    height: 73px;
+  &:hover,
+  &:focus {
+    &::before {
+      border: 2px solid $color-sapphire;
+      mask: none;
+      background-image: none;
+      opacity: 1;
+    }
+
+    &::after {
+      background-image: none;
+      background-color: $color-default-white;
+    }
+
+    & .video-player__play-button-svg {
+      color: $color-sapphire;
+    }
+  }
+
+  &:active {
+    &::after {
+      width: 58px;
+      height: 58px;
+    }
+  }
+
+  &--disabled {
+    opacity: 0.4;
+    pointer-events: none;
+
+    &::before {
+      border: 2px solid $color-sapphire;
+      mask: none;
+      background-image: none;
+      opacity: 1;
+    }
+
+    &::after {
+      background-image: none;
+      background-color: $color-default-white;
+    }
+
+    & .video-player__play-button-svg {
+      color: $color-sapphire;
+    }
   }
 }

@@ -1,0 +1,164 @@
+.free-visit {
+  background-color: $color-sapphire;
+  color: $color-default-white;
+  padding: 56px 170px 69px 103px;
+
+  @include vp-1199 {
+    padding: 61px 163px 70px 133px;
+  }
+
+  @include vp-767 {
+    padding: 63px 15px 70px;
+  }
+}
+
+.free-visit__wrapper {
+  margin: 0 0 0 auto;
+  max-width: 410px;
+
+  @include vp-1199 {
+    margin: 0;
+    max-width: none;
+  }
+}
+
+.free-visit__title {
+  font-family: $ff-secondary;
+  font-size: 54px;
+  font-weight: 800;
+  line-height: 156%;
+  letter-spacing: 1.62px;
+  margin: 0 0 11px;
+
+  @include vp-1199 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    margin: 0 0 26px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 0.96px;
+    margin: 0 0 28px;
+  }
+}
+
+.free-visit__form div {
+  display: flex;
+  margin: 0 0 26px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include vp-1199 {
+    column-gap: 60px;
+  }
+
+  @include vp-767 {
+    column-gap: unset;
+    row-gap: 20px;
+    flex-direction: column;
+    margin: 0 0 35px;
+  }
+}
+
+.free-visit__form .input-message.is-invalid {
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: $color-torch-red;
+}
+
+.free-visit__form label:has(.input-message.is-invalid) input[type="text"],
+.free-visit__form label:has(.input-message.is-invalid) input[type="tel"] {
+  border-bottom: 1px solid $color-torch-red;
+}
+
+.free-visit__form label {
+  width: calc(50% - 15px);
+  position: relative;
+
+  @include vp-1199 {
+    width: calc(50% - 30px);
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.free-visit__form input[type="text"],
+.free-visit__form input[type="tel"] {
+  position: relative;
+  color: $color-default-white;
+  font-family: $ff-placeholder;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid $color-slate-grey;
+  padding: 10px 15px;
+  width: 100%;
+
+  &::placeholder {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-family: $ff-placeholder;
+    color: $color-default-white;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &:hover:enabled {
+    border-bottom-color: $color-default-white;
+  }
+
+  &:active:enabled,
+  &:focus:enabled {
+    outline: 1px solid $color-default-white;
+
+    &::placeholder {
+      visibility: hidden;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}
+
+.free-visit__form button {
+  width: 100%;
+  color: inherit;
+  min-height: 52px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 3px solid $color-default-white;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover,
+  &:focus {
+    background-color: $color-default-white;
+    color: $color-egyptian-blue;
+  }
+
+  &:active {
+    color: $color-sapphire;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}

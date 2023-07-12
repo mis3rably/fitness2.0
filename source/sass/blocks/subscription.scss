@@ -1,11 +1,11 @@
 .subscription {
   padding: 120px 0 188px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 250px, rgba(248, 249, 252, 1) 250px, rgba(248, 249, 252, 1) 850px, rgba(255, 255, 255, 1) 850px);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 270px, rgba(248, 249, 252, 1) 270px, rgba(248, 249, 252, 1) 850px, rgba(255, 255, 255, 1) 850px);
   overflow: hidden;
 
   @include vp-1199 {
     background: linear-gradient(180deg, rgba(248, 249, 252, 1) 1778px, rgba(255, 255, 255, 1) 1778px);
-    padding: 100px 0 188px;
+    padding: 100px 0 186px;
   }
 
   @include vp-767 {
@@ -20,7 +20,6 @@
   position: relative;
 
   @include vp-1199 {
-    max-width: 442px;
     padding: 0;
   }
 
@@ -61,17 +60,26 @@
   padding: 0;
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
   gap: 40px;
   width: 100%;
   justify-content: center;
   z-index: 1;
 
   @include vp-1199 {
-    flex-direction: column;
-  }
-
-  @include vp-767 {
+    flex-wrap: wrap;
+    align-items: center;
     gap: 35px;
+  }
+}
+
+.subscription__card-item {
+  max-width: 360px;
+  min-width: 304px;
+  overflow: hidden;
+
+  @include vp-1199 {
+    min-width: none;
   }
 }
 
@@ -85,6 +93,9 @@
   font-weight: 400;
   line-height: 150%;
   color: rgba(16, 38, 84, 0.5);
+  cursor: pointer;
+  position: relative;
+  transition: 0.2s;
 
   @include vp-1199 {
     font-size: 18px;
@@ -92,6 +103,22 @@
 
   @include vp-767 {
     font-size: 16px;
+  }
+
+  &:focus,
+  &:hover {
+    color: rgba(16, 38, 84, 1);
+    outline: none;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: $color-torch-red-additional;
+      bottom: -13px;
+      left: 0;
+    }
   }
 
   &--active {
@@ -106,12 +133,10 @@
   margin: 0 0 39px 0;
 
   @include vp-1199 {
-    width: 75%;
     margin: 0 0 45px 0;
   }
 
   @include vp-767 {
-    width: auto;
     margin: 0 0 35px 0;
   }
 }
@@ -142,7 +167,7 @@
 
   @include vp-1199 {
     bottom: -180px;
-    right: -173px;
+    right: -9px;
   }
 
   @include vp-767 {

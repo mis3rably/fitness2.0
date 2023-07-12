@@ -8,9 +8,9 @@
   }
 
   @include vp-767 {
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
-    padding: 70px 0 53px;
+    padding: 70px 0 33px;
   }
 }
 
@@ -22,9 +22,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 15px 0;
 
   @include vp-1199 {
-    padding: 50px 0;
+    padding: 49px 0;
   }
 
   @include vp-767 {
@@ -49,6 +50,8 @@
   flex-direction: column;
   flex-shrink: 0;
   gap: 26px;
+  overflow: hidden;
+  max-width: 92px;
 
   @include vp-1199 {
     gap: 5px;
@@ -65,6 +68,7 @@
   letter-spacing: 2.46px;
   align-self: center;
   width: 201px;
+  overflow: hidden;
 
   @include vp-1199 {
     font-size: 48px;
@@ -115,6 +119,8 @@
   font-weight: 400;
   line-height: 150%;
   margin: 0 64px 0 0;
+  max-width: 280px;
+  overflow: hidden;
 
   @include vp-1199 {
     font-size: 12px;
@@ -164,7 +170,7 @@
 
 .super-games__picture {
   @include vp-767 {
-    width: 290px;
-    height: 292px;
+    max-width: 290px;
+    max-height: 292px;
   }
 }

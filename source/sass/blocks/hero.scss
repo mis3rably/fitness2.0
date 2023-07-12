@@ -44,11 +44,13 @@
     padding-top: 48px;
     gap: 17px;
     justify-content: flex-end;
-    max-width: none;
+    max-width: 50%;
   }
 
   @include vp-767 {
     padding-top: 68px;
+    display: block;
+    max-width: none;
   }
 }
 
@@ -56,8 +58,14 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  overflow: hidden;
+
+  @include vp-1199 {
+    max-width: 60%;
+  }
 
   @include vp-767 {
+    max-width: none;
     display: grid;
     grid-template-columns: 100px 1fr;
   }
@@ -92,6 +100,10 @@
 
 .hero__picture {
   flex-shrink: 0;
+
+  @include vp-1199 {
+    max-width: 50%;
+  }
 }
 
 .hero__title {
@@ -115,16 +127,18 @@
   }
 
   @include vp-767 {
+    padding: 0;
     grid-column: 2 / -1;
     justify-self: end;
-    margin: 0 0 23px 0;
+    margin: 0 0 17px 0;
+    max-width: 200px;
   }
 }
 
 .hero__list {
   position: absolute;
   left: -125px;
-  bottom: 188px;
+  top: 305px;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -133,6 +147,7 @@
   align-items: flex-end;
   flex-shrink: 0;
   align-self: center;
+  max-width: 113px;
 
   @include vp-1199 {
     position: static;
@@ -156,7 +171,7 @@
 .hero__link {
   display: block;
   color: $color-default-white;
-  padding: 22px 56px;
+  padding: 18px 56px;
 
   @include vp-1199 {
     padding: 21px 31px;
@@ -165,6 +180,7 @@
 
   @include vp-767 {
     grid-column: 1 / -1;
+    text-align: center;
   }
 }
 
