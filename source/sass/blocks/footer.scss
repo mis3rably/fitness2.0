@@ -76,6 +76,19 @@
     transform: translateX(-50%);
     opacity: 0;
     transition: 0.2s;
+
+    @include vp-1199 {
+      width: calc(100% - 30px);
+    }
+  }
+
+  @include vp-767 {
+    display: inline-block;
+
+    &::after {
+      width: calc(100% - 26px);
+      bottom: 5px;
+    }
   }
 
   &:focus,
