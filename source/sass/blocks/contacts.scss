@@ -114,3 +114,17 @@
     row-gap: 22px;
   }
 }
+
+.contacts__item-link {
+  text-decoration: none;
+  transition: 0.2s;
+
+  &:hover,
+  &:focus {
+    color: $color-default-black-opacity-80;
+  }
+
+  &:active {
+    color: $color-default-black-opacity-60;
+  }
+}

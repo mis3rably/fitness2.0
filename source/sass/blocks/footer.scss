@@ -31,15 +31,29 @@
 }
 
 .footer__logo {
-  font-size: 26px;
-  color: $color-default-white;
+  display: block;
+  transition: 0.2s;
 
+  &:focus,
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.footer__logo-img,
+.footer__logo {
   @include vp-1199 {
-    font-size: 24px;
+    width: 81px;
+    height: 18px;
   }
 
   @include vp-767 {
-    font-size: 20px;
+    width: 68px;
+    height: 15px;
   }
 }
 

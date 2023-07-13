@@ -18,7 +18,16 @@
 
     <header class="header container">
       <h1 class="visually-hidden">Фитнес-центр SYPERGYM.</h1>
-      <span class="header__logo main-logo">SUPERGYM</span>
+      <a class="header__logo" href="#">
+        <picture>
+          <source type="image/webp" media="(max-width: 767px)" srcset="img/logos/main-logo-mobile.webp, img/logos/main-logo-mobile@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 1199px)" srcset="img/logos/main-logo-tablet.webp, img/logos/main-logo-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/logos/main-logo.webp, img/logos/main-logo@2x.webp 2x">
+          <source media="(max-width: 767px)" srcset="img/logos/main-logo-mobile.png, img/logos/main-logo-mobile@2x.png 2x">
+          <source media="(max-width: 1199px)" srcset="img/logos/main-logo-tablet.png, img/logos/main-logo-tablet@2x.png 2x">
+          <img class="header__logo-img" src="img/logos/main-logo.png" srcset="img/logos/main-logo@2x.png 2x" alt="Логотип тренажерного зала SYPERGYM." width="122" height="24">
+        </picture>
+      </a>
       <a class="header__phone-link" href="tel:88005555555">8-800-555-55-55</a>
     </header>
     <main class="page__main">
@@ -412,7 +421,7 @@
       <section class="promo">
         <div class="container">
           <h2 class="promo__title title">Акции</h2>
-          <div class="promo-block__wrapper">
+          <div class="promo__block-wrapper">
             <div class="promo__special-block">
               <div class="promo__special-block-text-wrapper">
                 <p class="promo__special-block-subheading">Год</p>
@@ -689,9 +698,11 @@
             <form class="free-visit__form" action="https://echo.htmlacademy.ru/courses" method="get">
               <div>
                 <label data-validate-type="text" data-limitation="name" data-message-base="Поле обязательно" data-message-extra="Некорректное имя" data-required>
+                  <span class="visually-hidden">Поле ввода имени.</span>
                   <input type="text" placeholder="Имя" name="name">
                 </label>
                 <label data-validate-type="phone" data-message-base="Поле обязательно" data-message-extra="Некорректный номер" data-required>
+                  <span class="visually-hidden">Поле ввода номера телефона.</span>
                   <input type="tel" placeholder="Телефон" name="phone-number">
                 </label>
               </div>
@@ -717,11 +728,15 @@
               <div class="contacts__item-wrapper">
                 <div class="contacts__item">
                   <h3 class="contacts__item-title">Телефон:</h3>
-                  <p class="contacts__item-text">8-800-555-55-55</p>
+                  <p class="contacts__item-text">
+                    <a class="contacts__item-link" href=tel:88005555555">8-800-555-55-55</a>
+                  </p>
                 </div>
                 <div class="contacts__item">
                   <h3 class="contacts__item-title">Email:</h3>
-                  <p class="contacts__item-text">omsk@supergym.ru</p>
+                  <p class="contacts__item-text">
+                    <a class="contacts__item-link" href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
+                  </p>
                 </div>
               </div>
             </div>
@@ -733,7 +748,16 @@
     <footer class="footer">
       <div class="footer__container container">
         <div class="footer__logo-wrapper">
-          <span class="footer__logo main-logo">SUPERGYM</span>
+          <a class="footer__logo" href="#">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/logos/main-logo-mobile.webp, img/logos/main-logo-mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1199px)" srcset="img/logos/main-logo-tablet.webp, img/logos/main-logo-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/logos/main-logo.webp, img/logos/main-logo@2x.webp 2x">
+              <source media="(max-width: 767px)" srcset="img/logos/main-logo-mobile.png, img/logos/main-logo-mobile@2x.png 2x">
+              <source media="(max-width: 1199px)" srcset="img/logos/main-logo-tablet.png, img/logos/main-logo-tablet@2x.png 2x">
+              <img class="footer__logo-img" src="img/logos/main-logo.png" srcset="img/logos/main-logo@2x.png 2x" alt="Логотип тренажерного зала SYPERGYM." width="88" height="16">
+            </picture>
+          </a>
         </div>
         <div class="footer__navigation-item">
           <a class="footer__navigation-link" href="#">Услуги</a>
