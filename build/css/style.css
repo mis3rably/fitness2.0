@@ -1760,7 +1760,7 @@ button,
 @media (max-width: 767px) {
   .advantages__special-block {
     width: 100%;
-    min-height: 239px;
+    min-height: 245px;
     margin: 0 0 45px 0;
   }
 }
@@ -2178,7 +2178,7 @@ button,
 }
 @media (max-width: 1199px) {
   .coaches {
-    padding: 47px 101px 100px;
+    padding: 47px 101px 103px;
   }
 }
 @media (max-width: 767px) {
@@ -3404,14 +3404,14 @@ button,
     grid-column: 2/-1;
     -ms-grid-column-align: end;
         justify-self: end;
-    margin: 0 0 17px 0;
+    margin: 0 0 22px 0;
     max-width: 200px;
   }
 }
 .hero__text-wrapper a {
   display: block;
   color: #ffffff;
-  padding: 18px 56px;
+  padding: 18px 31px;
   font-size: 12px;
   font-style: normal;
   font-weight: 700;
@@ -3446,14 +3446,8 @@ button,
 .hero__text-wrapper a:active {
   color: #102654;
 }
-@media (max-width: 1199px) {
-  .hero__text-wrapper {
-    padding: 21px 31px;
-    min-width: 183px;
-  }
-}
 @media (max-width: 767px) {
-  .hero__text-wrapper {
+  .hero__text-wrapper a {
     grid-column: 1/-1;
     text-align: center;
   }
@@ -3895,18 +3889,28 @@ button,
 .reviews {
   padding: 120px 0;
 }
-.reviews > h2 {
+.reviews h2 {
   margin: 0 0 36px;
+  color: #102654;
+  font-size: 54px;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
   text-align: center;
+  letter-spacing: 1.62px;
 }
 @media (max-width: 1199px) {
-  .reviews > h2 {
+  .reviews h2 {
     margin: 0 0 40px;
+    letter-spacing: 1.26px;
+    font-size: 42px;
   }
 }
 @media (max-width: 767px) {
-  .reviews > h2 {
+  .reviews h2 {
     margin: 0 0 42px;
+    font-size: 32px;
   }
 }
 @media (max-width: 1199px) {
@@ -4245,6 +4249,18 @@ button,
   border: 3px solid #102654;
   background-color: #ffffff;
 }
+.subscription-card a:hover, .subscription-card a:focus {
+  color: #ffffff;
+  border-color: transparent;
+  border-image-source: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+  border-image-slice: 1;
+}
+.subscription-card a:hover::after, .subscription-card a:focus::after {
+  opacity: 1;
+}
+.subscription-card a:active {
+  color: rgba(255, 255, 255, 0.7);
+}
 .subscription-card a::after {
   content: "";
   position: absolute;
@@ -4259,18 +4275,6 @@ button,
   z-index: -1;
   -webkit-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
-}
-.subscription-card a:hover, .subscription-card a:focus {
-  color: #ffffff;
-  border-color: transparent;
-  border-image-source: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
-  border-image-slice: 1;
-}
-.subscription-card a:hover::after, .subscription-card a:focus::after {
-  opacity: 1;
-}
-.subscription-card a:active {
-  color: rgba(255, 255, 255, 0.7);
 }
 @media (max-width: 1199px) {
   .subscription-card {
@@ -4925,28 +4929,6 @@ button,
 }
 .video-player__play-button--disabled .video-player__play-button-svg {
   color: #102654;
-}
-
-.title {
-  color: #102654;
-  font-size: 54px;
-  font-family: "Alumni Sans", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  letter-spacing: 1.62px;
-}
-@media (max-width: 1199px) {
-  .title {
-    font-size: 42px;
-    letter-spacing: 1.26px;
-  }
-}
-@media (max-width: 767px) {
-  .title {
-    font-size: 32px;
-    letter-spacing: 0.96px;
-  }
 }
 
 .link {

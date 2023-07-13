@@ -25,21 +25,6 @@
     border: 3px solid $color-sapphire;
     background-color: $color-default-white;
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-      background-image: $gradient-primary;
-      opacity: 0;
-      z-index: -1;
-      transition: opacity 0.2s ease-in-out;
-    }
-
     &:hover,
     &:focus {
       color: $color-default-white;
@@ -54,6 +39,21 @@
 
     &:active {
       color: $color-default-white-opacity-70;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background-image: $gradient-primary;
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 0.2s ease-in-out;
     }
   }
 
