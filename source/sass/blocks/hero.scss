@@ -42,7 +42,7 @@
   @include vp-1199 {
     flex-grow: 1;
     padding-top: 48px;
-    gap: 17px;
+    gap: 26px;
     justify-content: flex-end;
     max-width: 50%;
   }
@@ -130,6 +130,8 @@
     z-index: 0;
     border: 3px solid $color-default-white;
     transition: 0.2s;
+    min-width: 230px;
+    text-align: center;
 
     &::after {
       content: "";
@@ -156,14 +158,18 @@
       color: $color-sapphire;
     }
 
+    @include vp-1199 {
+      min-width: 0;
+      width: 100%;
+    }
+
     @include vp-767 {
       grid-column: 1 / -1;
-      text-align: center;
     }
   }
 
   @include vp-1199 {
-    max-width: 60%;
+    max-width: 57%;
   }
 
   @include vp-767 {
