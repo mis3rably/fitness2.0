@@ -128,6 +128,63 @@
 }
 
 .footer__navigation-item {
+  a {
+    position: relative;
+    color: $color-default-white;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: calc(100% - 40px);
+      height: 1px;
+      background-color: $color-default-white;
+      left: 50%;
+      bottom: 15px;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: 0.2s;
+
+      @include vp-1199 {
+        width: calc(100% - 30px);
+      }
+    }
+
+    @include vp-767 {
+      display: inline-block;
+
+      &::after {
+        width: calc(100% - 26px);
+        bottom: 5px;
+      }
+    }
+
+    &:focus,
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    @include vp-1199 {
+      padding: 15px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      padding: 8px 13px;
+    }
+  }
+
+  &--disabled a {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
   @include vp-767 {
     width: 50%;
   }

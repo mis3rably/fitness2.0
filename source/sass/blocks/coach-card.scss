@@ -4,6 +4,26 @@
   width: 260px;
   background-color: $color-additional-black;
 
+  > p {
+    margin: 0;
+    font-size: 18px;
+    color: $color-default-white;
+    white-space: nowrap;
+    line-height: 100%;
+    max-width: 240px;
+    position: absolute;
+    left: 50%;
+    bottom: 27px;
+    transform: translateX(-50%);
+
+    @media (min-width: 1200px) {
+      &:hover,
+      &:focus {
+        display: none;
+      }
+    }
+  }
+
   @include vp-1199 {
     width: 268px;
     height: 294px;
@@ -21,7 +41,7 @@
       opacity: 1;
     }
 
-    .coach-card__name--outer {
+    > p {
       display: none;
     }
   }
@@ -44,35 +64,22 @@
   background-color: rgba(16, 38, 84, 0.89);
   transition: 0.2s;
 
+  p {
+    font-size: 18px;
+    color: $color-default-white;
+    white-space: nowrap;
+    line-height: 100%;
+    max-width: 240px;
+    margin: 0 0 2px 0;
+  }
+
+  span {
+    font-size: 16px;
+    color: $color-spindle;
+  }
+
   @include vp-767 {
     padding: 10px 33px;
-  }
-}
-
-.coach-card__name {
-  margin: 0;
-  font-size: 18px;
-  color: $color-default-white;
-  white-space: nowrap;
-  line-height: 100%;
-  max-width: 240px;
-
-  &--outer {
-    position: absolute;
-    left: 50%;
-    bottom: 27px;
-    transform: translateX(-50%);
-
-    @media (min-width: 1200px) {
-      &:hover,
-      &:focus {
-        display: none;
-      }
-    }
-  }
-
-  &--inner {
-    margin: 0 0 2px 0;
   }
 }
 
@@ -83,30 +90,25 @@
   margin: 33px 0 0 0;
   padding: 0 0 0 15px;
   list-style-type: none;
-}
 
-.coach-card__experience-item {
-  font-size: 14px;
-  line-height: 20px;
-  color: $color-default-white;
-  position: relative;
+  li {
+    font-size: 14px;
+    line-height: 20px;
+    color: $color-default-white;
+    position: relative;
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    top: 8px;
-    left: -15px;
-    background-color: $color-default-white;
-    display: block;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      top: 8px;
+      left: -15px;
+      background-color: $color-default-white;
+      display: block;
+    }
   }
-}
-
-.coach-card__type {
-  font-size: 16px;
-  color: $color-spindle;
 }
 
 .coach-card__avatar {

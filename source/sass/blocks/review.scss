@@ -8,6 +8,27 @@
   color: $color-default-white;
   gap: 4px 28px;
 
+  span {
+    font-size: 20px;
+    font-weight: 700;
+
+    @include vp-767 {
+      display: inline-block;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+
+    @include vp-767 {
+      grid-column: 1 / 3;
+      text-align: center;
+      line-height: 140%;
+    }
+  }
+
   @include vp-1199 {
     gap: 4px 32px;
   }
@@ -30,26 +51,5 @@
   @media (min-width: 768px) {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
-  }
-}
-
-.review__reviewer-name {
-  font-size: 20px;
-  font-weight: 700;
-
-  @include vp-767 {
-    display: inline-block;
-  }
-}
-
-.review__reviewer__message {
-  font-size: 16px;
-  font-weight: 400;
-  margin: 0;
-
-  @include vp-767 {
-    grid-column: 1 / 3;
-    text-align: center;
-    line-height: 140%;
   }
 }

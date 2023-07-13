@@ -19,21 +19,35 @@
   align-items: center;
   position: relative;
 
+  > h2 {
+    margin: 0 0 17px 0;
+    color: $color-sapphire;
+    font-size: 54px;
+    font-family: $ff-secondary;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1.62px;
+
+    @include vp-1199 {
+      font-size: 42px;
+      letter-spacing: 1.26px;
+      max-width: 442px;
+      margin: 0 14px 20px 0;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+      letter-spacing: 0.96px;
+    }
+  }
+
   @include vp-1199 {
     padding: 0;
   }
 
   @include vp-767 {
     padding: 0 15px;
-  }
-}
-
-.subscription__title {
-  margin: 0 0 17px 0;
-
-  @include vp-1199 {
-    max-width: 442px;
-    margin: 0 14px 20px 0;
   }
 }
 
@@ -83,45 +97,47 @@
   }
 }
 
-.subscription__button {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  background: transparent;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
-  color: rgba(16, 38, 84, 0.5);
-  cursor: pointer;
-  position: relative;
-  transition: 0.2s;
+.subscription__item {
+  button {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: transparent;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    color: rgba(16, 38, 84, 0.5);
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s;
 
-  @include vp-1199 {
-    font-size: 18px;
-  }
+    @include vp-1199 {
+      font-size: 18px;
+    }
 
-  @include vp-767 {
-    font-size: 16px;
-  }
+    @include vp-767 {
+      font-size: 16px;
+    }
 
-  &:focus,
-  &:hover {
-    color: rgba(16, 38, 84, 1);
-    outline: none;
+    &:focus,
+    &:hover {
+      color: rgba(16, 38, 84, 1);
+      outline: none;
 
-    &::after {
-      position: absolute;
-      content: "";
-      width: 100%;
-      height: 2px;
-      background-color: $color-torch-red-additional;
-      bottom: -13px;
-      left: 0;
+      &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: $color-torch-red-additional;
+        bottom: -13px;
+        left: 0;
+      }
     }
   }
 
-  &--active {
+  &--active button {
     color: rgba(16, 38, 84, 1);
   }
 }

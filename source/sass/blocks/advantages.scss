@@ -12,22 +12,33 @@
 }
 
 .advantages__wrapper {
+  > h2 {
+    margin: 0 0 55px;
+    text-align: center;
+    color: $color-sapphire;
+    font-size: 54px;
+    font-family: $ff-secondary;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1.62px;
+
+    @include vp-1199 {
+      margin: 0 22px 45px 0;
+      font-size: 42px;
+      letter-spacing: 1.26px;
+    }
+
+    @include vp-767 {
+      margin: 0 0 45px 0;
+      padding: 0 36px 0 20px;
+      font-size: 32px;
+      letter-spacing: 0.96px;
+    }
+  }
+
   @include vp-767 {
     padding: 0;
-  }
-}
-
-.advantages__title {
-  margin: 0 0 55px;
-  text-align: center;
-
-  @include vp-1199 {
-    margin: 0 22px 45px 0;
-  }
-
-  @include vp-767 {
-    margin: 0 0 45px 0;
-    padding: 0 36px 0 20px;
   }
 }
 
@@ -65,6 +76,31 @@
   flex-direction: column;
   max-width: 216px;
 
+  b {
+    font-size: 71px;
+    font-weight: 700;
+    line-height: 55px;
+    background-image: $gradient-secondary;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+
+    @include vp-1199 {
+      font-size: 58px;
+      line-height: 52px;
+    }
+
+    @include vp-767 {
+      line-height: 49px;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    margin: 0;
+    color: $color-persian-blue;
+  }
+
   @include vp-767 {
     align-items: center;
   }
@@ -82,31 +118,11 @@
   }
 }
 
-.advantages__item-heading {
-  font-size: 71px;
-  font-weight: 700;
-  line-height: 55px;
-  background-image: $gradient-secondary;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin: 0;
-
-  @include vp-1199 {
-    font-size: 58px;
-    line-height: 52px;
-  }
-
-  @include vp-767 {
-    line-height: 49px;
-  }
-}
-
 .advantages__item {
   position: relative;
   display: flex;
   max-width: 328px;
   gap: 30px;
-  // justify-self: center;
 
   @include vp-1199 {
     justify-self: auto;
@@ -124,17 +140,32 @@
   }
 }
 
-.advantages__item-subheading {
-  font-size: 14px;
-  margin: 0;
-  color: $color-persian-blue;
-}
-
 .advantages__desc-wrapper {
   display: flex;
   flex-direction: column;
   gap: 7px;
   color: $color-sapphire;
+
+  h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+
+    @include vp-1199 {
+      font-size: 20px;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 140%;
+
+    @include vp-767 {
+      text-align: center;
+    }
+  }
 
   @include vp-1199 {
     gap: 3px;
@@ -157,17 +188,6 @@
   }
 }
 
-.advantages__desc-text {
-  margin: 0;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 140%;
-
-  @include vp-767 {
-    text-align: center;
-  }
-}
-
 .advantages__special-block {
   background-color: $color-resolution-blue;
   color: $color-default-white;
@@ -183,6 +203,49 @@
   grid-row: 1 / 4;
   overflow: hidden;
 
+  b {
+    font-size: 74px;
+    font-weight: 700;
+    line-height: 100%;
+    color: $color-default-white;
+    margin: 0 0 8px 0;
+    max-width: 225px;
+
+    @include vp-1199 {
+      line-height: 82px;
+      margin: 0;
+    }
+
+    @include vp-767 {
+      line-height: 73px;
+    }
+  }
+
+  p {
+    font-size: 26px;
+    font-weight: 700;
+    color: $color-default-white;
+    margin: 0 0 41px 0;
+
+    @include vp-1199 {
+      font-size: 22px;
+      margin: 0 0 19px 0;
+    }
+
+    @include vp-767 {
+      margin: 0 0 11px 0;
+    }
+  }
+
+  span {
+    margin: 0;
+    text-align: center;
+
+    @include vp-1199 {
+      width: 172px;
+    }
+  }
+
   @include vp-1199 {
     width: 442px;
     min-height: 239px;
@@ -196,48 +259,5 @@
     width: 100%;
     min-height: 239px;
     margin: 0 0 45px 0;
-  }
-}
-
-.advantages__special-block__heading {
-  font-size: 74px;
-  font-weight: 700;
-  line-height: 100%;
-  color: $color-default-white;
-  margin: 0 0 8px 0;
-  max-width: 225px;
-
-  @include vp-1199 {
-    line-height: 82px;
-    margin: 0;
-  }
-
-  @include vp-767 {
-    line-height: 73px;
-  }
-}
-
-.advantages__special-block__subheading {
-  font-size: 26px;
-  font-weight: 700;
-  color: $color-default-white;
-  margin: 0 0 41px 0;
-
-  @include vp-1199 {
-    font-size: 22px;
-    margin: 0 0 19px 0;
-  }
-
-  @include vp-767 {
-    margin: 0 0 11px 0;
-  }
-}
-
-.advantages__special-block__desc {
-  margin: 0;
-  text-align: center;
-
-  @include vp-1199 {
-    width: 172px;
   }
 }
