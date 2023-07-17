@@ -35,7 +35,7 @@ const optimizeSvg = () =>
                 },
                 {
                   name: 'removeUselessDefs',
-                  active: true,
+                  active: false,
                 }],
             })]))
       .pipe(gulp.dest('build/img'));

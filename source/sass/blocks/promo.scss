@@ -199,14 +199,6 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-
-    br {
-      display: none;
-
-      @include vp-1199 {
-        display: block;
-      }
-    }
   }
 
   a {

@@ -1,5 +1,5 @@
 .coaches {
-  padding: 53px 103px 94px;
+  padding: 53px 103px 104px;
   max-width: 1366px;
   margin: 0 auto;
 
@@ -15,20 +15,20 @@
 
     @include vp-1199 {
       text-align: center;
-      margin: 0 0 28px 0;
+      margin: 0 0 31px 0;
       font-size: 42px;
       letter-spacing: 1.26px;
     }
 
     @include vp-767 {
-      margin: 0 0 40px 0;
+      margin: 0 0 44px 0;
       font-size: 32px;
       letter-spacing: 0.96px;
     }
   }
 
   @include vp-1199 {
-    padding: 47px 101px 103px;
+    padding: 47px 101px 101px;
   }
 
   @include vp-767 {

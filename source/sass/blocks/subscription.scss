@@ -1,6 +1,6 @@
 .subscription {
   padding: 120px 0 188px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 270px, rgba(248, 249, 252, 1) 270px, rgba(248, 249, 252, 1) 850px, rgba(255, 255, 255, 1) 850px);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0, rgba(248, 249, 252, 1) 0, rgba(248, 249, 252, 1) 850px, rgba(255, 255, 255, 1) 850px);
   overflow: hidden;
 
   @include vp-1199 {
@@ -73,27 +73,32 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   width: 100%;
-  justify-content: center;
   z-index: 1;
 
   @include vp-1199 {
-    flex-wrap: wrap;
-    align-items: center;
     gap: 35px;
+    grid-template-columns: 1fr;
   }
 }
 
 .subscription__card-item {
-  max-width: 360px;
-  min-width: 304px;
+  @media (min-width: 1200px) {
+    max-width: 360px;
+    min-width: 304px;
+  }
   overflow: hidden;
 
   @include vp-1199 {
-    min-width: none;
+    justify-self: center;
+    width: 57.5%;
+  }
+
+  @include vp-767 {
+    width: 100%;
   }
 }
 

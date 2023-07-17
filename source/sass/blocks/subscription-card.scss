@@ -24,6 +24,7 @@
     z-index: 0;
     border: 3px solid $color-sapphire;
     background-color: $color-default-white;
+    user-select: none;
 
     &:hover,
     &:focus {
@@ -69,7 +70,7 @@
   }
 
   &:hover,
-  &:focus {
+  &:focus-within {
     border-image: $gradient-primary;
     border-image-slice: 1;
   }

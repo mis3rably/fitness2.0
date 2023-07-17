@@ -1,13 +1,13 @@
 .advantages {
   background-color: $color-additional-white;
-  padding: 119px 0 111px;
+  padding: 109px 0 111px;
 
   @include vp-1199 {
     padding: 91px 0 95px;
   }
 
   @include vp-767 {
-    padding: 66px 0 63px;
+    padding: 63px 0;
   }
 }
 
@@ -30,8 +30,7 @@
     }
 
     @include vp-767 {
-      margin: 0 0 45px 0;
-      padding: 0 36px 0 20px;
+      margin: 0 0 47px 0;
       font-size: 32px;
       letter-spacing: 0.96px;
     }
@@ -257,7 +256,7 @@
 
   @include vp-767 {
     width: 100%;
-    min-height: 245px;
+    min-height: 240px;
     margin: 0 0 45px 0;
   }
 }

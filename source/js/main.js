@@ -90,10 +90,3 @@ if (tabClickableArea && tabsList && toggleTabsList && tabsGroupList) {
 const form = new Form();
 form.init();
 window.form = form;
-
-if (formSubmit && formMainPage) {
-  formMainPage.addEventListener('submit', (evt) => {
-    evt.preventDefault();
-    formMainPage.reset().submit();
-  });
-}

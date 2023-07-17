@@ -4,21 +4,21 @@
   @include vp-1199 {
     gap: 30px;
     background: $hero-bg-tablet;
-    padding-bottom: 31px;
+    padding-bottom: 35px;
   }
 
   @include vp-767 {
     gap: 0;
     background: $hero-bg-mobile;
-    padding-bottom: 28px;
+    padding-bottom: 33px;
   }
 }
 
 .hero__wrapper {
   display: flex;
-  gap: 65px;
-  justify-content: center;
-  padding-bottom: 51px;
+  justify-content: space-between;
+  padding-bottom: 47px;
+  gap: 15px;
 
   @include vp-1199 {
     justify-content: space-between;
@@ -33,18 +33,21 @@
 
 .hero__content-wrapper {
   position: relative;
-  max-width: 250px;
-  padding-top: 111px;
+  margin-top: 107px;
+  margin-left: 16px;
+  max-width: 380px;
   display: flex;
   justify-content: space-between;
   gap: 28px;
+  padding: 0 0 0 126px;
 
   @include vp-1199 {
     flex-grow: 1;
-    padding-top: 48px;
-    gap: 26px;
-    justify-content: flex-end;
+    padding: 48px 0 0;
+    justify-content: space-between;
     max-width: 50%;
+    margin: 0;
+    gap: 0;
   }
 
   @include vp-767 {
@@ -59,6 +62,7 @@
   flex-direction: column;
   align-items: flex-end;
   overflow: hidden;
+  user-select: none;
 
   p {
     color: $color-default-white;
@@ -160,16 +164,19 @@
 
     @include vp-1199 {
       min-width: 0;
+      max-width: 184px;
+      padding: 18px 27px;
       width: 100%;
     }
 
     @include vp-767 {
       grid-column: 1 / -1;
+      max-width: none;
     }
   }
 
   @include vp-1199 {
-    max-width: 57%;
+    max-width: 61%;
   }
 
   @include vp-767 {
@@ -180,17 +187,16 @@
 }
 
 .hero__picture {
-  flex-shrink: 0;
-
   @include vp-1199 {
     max-width: 50%;
+    flex-shrink: 0;
   }
 }
 
 .hero__list {
   position: absolute;
-  left: -125px;
-  top: 305px;
+  left: 3px;
+  top: 194px;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -221,7 +227,7 @@
 }
 
 .hero__image {
-  margin-right: 55px;
+  margin: 0 200px 0 0;
 
   @include vp-1199 {
     margin-right: 0;

@@ -222,29 +222,31 @@
   font-variant: initial;
   line-height: 1;
   width: 16px;
-  height: 32px;
+  height: 33px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 
   @media (max-width: 767px) {
     font-size: 22px;
+    width: 12px;
+    height: 24px;
   }
 }
 .swiper-button-prev:after {
-  left: 14px;
+  left: 16px;
 
   @media (max-width: 767px) {
-    left: 5px;
-    top: 20px;
+    left: 8px;
+    top: 17px;
   }
 }
 .swiper-button-next::after {
   right: 16px;
 
   @media (max-width: 767px) {
-    right: 5px;
-    top: 20px;
+    right: 8px;
+    top: 17px;
   }
 }
 .swiper-button-prev,
@@ -253,7 +255,8 @@
   right: auto;
 
   @media (max-width: 767px) {
-    left: -38px;
+    left: -41px;
+    top: 54%;
   }
 }
 .swiper-button-prev:after,
@@ -266,7 +269,8 @@
   left: auto;
 
   @media (max-width: 767px) {
-    right: -38px;
+    right: -41px;
+    top: 54%;
   }
 }
 .swiper-button-next:after,

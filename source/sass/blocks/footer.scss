@@ -9,7 +9,7 @@
   }
 
   @include vp-767 {
-    padding: 38px 0 52px;
+    padding: 38px 0 47px;
   }
 }
 
@@ -24,6 +24,9 @@
   }
 
   @include vp-767 {
+    position: absolute;
+    top: 11px;
+    left: 0;
     margin: 0;
     padding: 0 0 0 15px;
     width: 50%;
@@ -32,6 +35,7 @@
 
 .footer__logo {
   display: block;
+  width: fit-content;
   transition: 0.2s;
 
   &:focus,
@@ -67,6 +71,16 @@
 
   @include vp-1199 {
     max-width: 419px;
+  }
+
+  @include vp-767 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 40px);
+    grid-auto-flow: column;
+    width: 100%;
+    max-width: none;
+    margin: 0 0 19px;
   }
 }
 
@@ -188,6 +202,13 @@
   @include vp-767 {
     width: 50%;
   }
+
+  &:first-child {
+    @include vp-767 {
+      grid-row: 1 / 3;
+      padding: 40px 0 0;
+    }
+  }
 }
 
 .footer__socials-list {
@@ -197,11 +218,8 @@
   display: flex;
 
   @include vp-767 {
-    width: calc(100% - 10px);
-    position: absolute;
-    margin: 0;
-    padding: 0 0 0 10px;
-    bottom: -5px;
+    width: 100%;
+    padding: 0 0 0 11px;
     flex-wrap: wrap;
   }
 }
@@ -212,12 +230,10 @@
   flex-wrap: wrap;
 
   @include vp-767 {
-    padding: 0 0 50px;
+    padding: 0;
     position: relative;
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(3, 1fr);
-    grid-auto-flow: column;
+    display: flex;
+    flex-direction: column;
   }
 }
 
